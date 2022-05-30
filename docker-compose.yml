@@ -1,0 +1,23 @@
+# File intended for local dev environment set up, not openshift envs.
+version: "3.8"
+services:
+
+  # WebApp
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile-dev-local-env
+      args:
+        PYTHON_IMAGE_TAG: "${PYTHON_IMAGE_TAG}"
+    env_file:
+      - .env
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0:8000"
+
+volumes:
+  pgDataVol:
