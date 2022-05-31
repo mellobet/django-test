@@ -6,7 +6,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile-dev-local-env
+      # dockerfile: Dockerfile-dev-local-env
       args:
         PYTHON_IMAGE_TAG: "${PYTHON_IMAGE_TAG}"
     env_file:
