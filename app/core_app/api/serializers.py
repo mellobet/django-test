@@ -1,7 +1,6 @@
 from datetime import date
 
 from core_app.models import Atendee, Event
-from django.utils import timezone
 from rest_framework import serializers
 
 
