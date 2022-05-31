@@ -1,5 +1,10 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-
+# C extensions
+*.so
 
 # Distribution / packaging
 .Python
@@ -33,7 +38,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-# htmlcov/
+htmlcov/
 .tox/
 .nox/
 .coverage
@@ -46,7 +51,7 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-# reports/
+reports/
 scripts/
 
 # Translations
@@ -56,9 +61,7 @@ scripts/
 # Django stuff:
 *.log
 local_settings.py
-
-# for demo
-# db.sqlite3
+db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
