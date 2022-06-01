@@ -52,20 +52,3 @@ class AtendeeFactory(factory.django.DjangoModelFactory):
         if extracted:
             for event in extracted:
                 self.events.add(event)
-
-
-# @pytest.fixture
-# def make_specified_hosts(monkeypatch):
-#     monkeypatch.setattr(MessageUtils, "send_command", lambda *args, **kwargs: None)
-
-#     ac1 = AppCodeFactory(id="apc_1")
-#     ac2 = AppCodeFactory(id="apc_2")
-#     ac3 = AppCodeFactory(id="apc_3")
-
-#     HostFactory(
-#         fqdn="beispiel-1.example.local",
-#         component_id="ec3b15dc-157d-420d-aae9-1f5a72b27eb0",
-#         os_flavor="linux",
-#         environment="production",
-#         app_codes=(ac1,),
-#     )
